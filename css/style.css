@@ -1,0 +1,214 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family:"Montserrat", sans-serif ;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body 
+{
+    background:#171616;
+    color:#fff;
+}
+#header
+{
+    width: 100%;
+    height: 100vh;
+    background-image:url(../images/background.png);
+    background-position: left;
+    background-size: cover;
+}
+.container
+{
+    padding: 10px 10%;
+}
+.logo
+{
+    width: 140px;
+}
+nav 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+nav ul li  
+{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    margin: 0 20px;
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: .5s ;
+}
+nav ul li  a
+{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul li::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 4px;
+    background-color: #FF004F;
+    transition: width .4s;
+}
+nav ul li:hover::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4px;
+    background-color: #FF004F;
+    transition: width .4s;
+}
+nav ul li:hover
+{
+    transition-delay:.4s;
+    border: 1px solid #FF004F;
+    background-color: #FF004F;
+    color: #fff;
+}
+.header_text
+{
+    margin-top: 20%;
+    font-size: 30px;
+    min-width: 400px;
+    min-width: 800px;
+}
+.header_text h1
+{
+    font-size: 90px;
+    font-weight: 900;
+    margin: 20px 0;
+}
+.header_text h1 .name{
+    color: #FF004F;
+    padding-left: 10px;
+}
+.header_text h1 span
+{
+    position: relative;
+}
+.header_text h1 span::before
+{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FF004F;
+    border-radius: 3px;
+}
+.header_text p{
+    color: #fffefe;
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.contact_btns button
+{
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 15px 50px;
+    cursor: pointer;
+    border: 1px solid #FF004F;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+}
+.contact_btns button
+{
+    transition: .4s ease-in;
+}
+.contact_btns button:hover
+{
+    background-color: #FF004F;
+    transform: scale(1.1);
+}
+/* Start About */
+.about 
+{
+    height: 100vh;
+}
+.about .row
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.about .row .col1
+{
+    width: 500px;
+    margin-top: 30px;
+    flex: 1;
+}
+
+.about .row .col1 img
+{
+    min-width: 300px;
+    margin-top: 30px;
+    border-radius: 30px;
+    box-shadow:0 15px 13px #f63051;
+    transition: .3s box-shadow;
+}
+.about .row .col1 img:hover
+{
+    box-shadow: none;
+}
+
+.about .row .col2
+{
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+}
+
+.about .row .col2 h1
+{
+    font-size: 12rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.about .row .col2 h1 span
+{
+    color: #ff0051dd;
+}
+.about .row .col2 .title
+{
+    margin-bottom: 25px;
+    font-size: 4rem;
+}
+.about .row .col2 p
+{
+    font-size: 2rem;
+    line-height: 1.8;
+    font-weight: bold;
+}
+/* End About */
+/* Start Services */
+.services
+{
+    display: grid;
+    grid-template-columns:repeat(3,auto);
+}
+/* End Services */
